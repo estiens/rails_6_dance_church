@@ -1,0 +1,49 @@
+%section.hero.is-primary
+  .hero-body
+    .container
+      %h1.title
+        Dance Church Minneapolis
+      %h2.subtitle
+        An intentional space to celebrate life by dancing together.
+        %br
+        Every Sunday. 11am-1pm. Tapestry Folkdance Center.
+%section.upcoming
+  .container.has-margin-top-5
+    %h1.title
+      Next Up
+    .level
+      = render 'date_block', date: @first_scheduled_date
+      = render 'date_block', date: @second_scheduled_date
+      = render 'date_block', date: @third_scheduled_date
+%section
+  .container.has-margin-top-5
+    %h3.title.is-3
+      A few church-etiquette reminders:
+    .list
+      .list-item
+        $5 suggested donation for adults, kids are free (and please don't let money keep you from attending)
+      .list-item
+        Come anytime between 11 and 1
+      .list-item
+        Dance Church is a secular event, with no religious affiliation
+      .list-item
+        Bring a yoga mat if you like — there's room to stretch
+      .list-item
+        The main space is intended for dancing, meditating, and movement. Please use the hallway and kitchen space for conversations and refreshments.
+      .list-item
+        Please limit photography and use discretion when posting photos or videos, as we want everyone to feel safe and comfortable in their self-expression
+      .list-item
+        We like to keep the main space clear, open, and devoted to dancing, so please no table displays (product, promotional, religious, etc.)
+      .list-item
+        Come to dance!
+%section
+  .container.has-margin-top-5
+    .columns
+      .column
+        .mapbox.text-center
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.4442492040644!2d-93.22700524872243!3d44.93463617653991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f62849bfbe0d43%3A0xd87b01c93eca04f4!2sTapestry+Folkdance+Center!5e0!3m2!1sen!2sus!4v1498183337140", :style => "border:0", :width => "500px"}
+      .column
+        %h3.title.is-3
+          PARKING NOTES
+        %p
+          There is Tapestry parking across the street. If you park in other lots, make sure you are not parking in private spaces.

@@ -1,0 +1,18 @@
+.section
+  .container
+    .title
+      Most Recent Shows
+    .columns.is-multiline
+      - @archives.each do |archive|
+        .column.is-one-quarter
+          = render 'archive', show: archive
+.section
+  .container
+    .title
+      Shows by DJ
+    .columns.is-multiline
+      - @djs.each do |dj|
+        .column.is-narrow
+          = link_to dj do
+            .button
+              = dj.name

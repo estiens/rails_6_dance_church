@@ -1,0 +1,8 @@
+= bulma_form_with(model: @contact, local: true) do |f|
+  = f.text_field :name
+  = f.text_field :email
+  = f.text_field :message, size: "30x10"
+  = f.submit "Contact Us"
+  .is-invisible
+    = f.text_field :nickname
+

@@ -1,0 +1,28 @@
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }
+
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    %link{:href => "//fonts.googleapis.com/css?family=Lato", :rel => "stylesheet"}/
+    %title Dance Church Minneapolis
+
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    
+    = csrf_meta_tag
+
+  %body
+    - flash.each do |key, value|
+      .flash
+        - if value.class == Array
+          .notification{class: "#{flash_class(key)}"}
+            - value.each do |message|
+              = message
+        - else
+          .notification{class: "#{flash_class(key)}"}
+            %button.delete{"aria-label" => "delete"}
+            .message-body
+              = value
+    = render 'components/topbar'
+    = yield

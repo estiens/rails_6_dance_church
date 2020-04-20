@@ -5,18 +5,22 @@ ruby '2.5.8'
 
 gem 'rails'
 gem 'pg'
-gem 'puma', '~> 4.1'
+gem 'unicorn'
+
+gem 'administrate'
+gem 'administrate-field-active_storage'
 
 gem 'cloudinary'
+gem 'httparty'
 
-# Use SCSS for stylesheets
+gem 'mail_form'
+
+gem 'haml'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-
 gem 'image_processing', '~> 1.2'
+gem 'bulma_form_builder'
 
 gem 'bootsnap', require: false
 

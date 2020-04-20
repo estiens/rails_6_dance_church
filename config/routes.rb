@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :admin do
+      resources :scheduled_dates
+      resources :archives
+      resources :djs
+
+      root to: "scheduled_dates#index"
+    end
+    
+    root to: 'home#index'
+    resources :archives, only: %i[index]
+    resources :contacts, only: %i[new create]
+    resources :djs, only: [:show]
 end

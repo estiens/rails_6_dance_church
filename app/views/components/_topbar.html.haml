@@ -1,0 +1,20 @@
+.container
+  %nav.navbar
+    #main-nav.navbar-menu
+      .navbar-start
+        = link_to root_url, class: 'navbar-item' do
+          %span.icon
+            %i.far.fa-gem
+          %span Home
+        = link_to archives_path, class: 'navbar-item' do
+          %span.icon
+            %i.far.fa-star
+          %span Archives
+        = link_to new_contact_path, class: 'navbar-item' do
+          %span.icon
+            %i.far.fa-email
+          %span Contact
+        = link_to 'https://www.facebook.com/groups/428438187299569/', class: 'navbar-item' do
+          %span.icon
+            %i.far.fa-facebook
+          %span Facebook

@@ -1,0 +1,17 @@
+.hero.is-primary
+  .hero-body
+    .hero-title
+      %h1.title.is-1.has-text-centered
+        = @dj.name
+.section
+  .container
+    .title
+      All Shows
+    - if @archives.count.positive?
+      .columns.is-multiline
+        - @archives.each do |archive|
+          .column.is-one-quarter
+            = render 'archives/archive', show: archive
+    - else
+      %p
+        Sorry, no shows here yet
