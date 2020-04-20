@@ -9,13 +9,10 @@ module Admin
     before_action :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
-    end
+      login = Rails.application.credentials.dig(:admin_login) || 'foo'
+      password = Rails.application.credentials.dig(:admin_password) || 'bar'
 
-    # Override this value to specify the number of elements to display at a time
-    # on index pages. Defaults to 20.
-    # def records_per_page
-    #   params[:per_page] || 20
-    # end
+      http_basic_authenticate_with name: login, password: password
+    end
   end
 end
